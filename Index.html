@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitX Gym – Elite Fitness Destination in Kota | Kunhari, Gumanpura, Station Road</title>
+    <meta name="description" content="Awaken your true potential at FitX Gym. Kota's most advanced fitness facility with 3 elite locations, expert trainers, and world-class equipment.">
+    <meta name="keywords" content="Best Gym in Kota, Gym in Kunhari, Gym in Gumanpura, Gym near Station Road, Weight Loss Program Kota, Personal Trainer Kota, Zumba Classes Kota">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="FitX Gym – Elite Fitness Destination in Kota">
+    <meta property="og:description" content="Forge your legacy at Kota's premium fitness destination.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.fitxgym.in">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Razorpay Checkout Script for Payment Integration -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#020202',
+                        surface: '#0a0a0a',
+                        surfaceLight: '#111111',
+                        crimson: { 400: '#f87171', 500: '#ef4444', 600: '#dc2626', 700: '#b91c1c', 900: '#450a0a', 950: '#2a0a0a' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Rajdhani', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, rgba(220, 38, 38, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(220, 38, 38, 0.03) 1px, transparent 1px)",
+                        'noise': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJnoiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjAzIi8+PC9zdmc+')"
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; cursor: none; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Rajdhani', sans-serif; }
+        
+        .cursor-dot, .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .cursor-dot { width: 8px; height: 8px; background-color: #ef4444; }
+        .cursor-outline {
+            width: 40px; height: 40px;
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        body:hover .cursor-outline.hovered {
+            width: 60px; height: 60px;
+            background-color: rgba(239, 68, 68, 0.1);
+            border-color: #ef4444;
+        }
+
+        .elite-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(220, 38, 38, 0.15);
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+            transition: transform 0.1s ease-out, box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.4s ease;
+            transform-style: preserve-3d;
+        }
+        .elite-card:hover {
+            border-color: rgba(220, 38, 38, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(220, 38, 38, 0.15);
+        }
+        
+        .elite-btn {
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .elite-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .elite-btn:hover::before { left: 100%; }
+        .elite-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+        }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes aura-pulse { 0%, 100% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.1); } 50% { box-shadow: 0 0 80px rgba(220, 38, 38, 0.3); } }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+        @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .animate-fade-up { animation: fadeInUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards; }
+        .animate-aura { animation: aura-pulse 4s ease-in-out infinite; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-ticker { animation: ticker 40s linear infinite; }
+        .animate-slide-down { animation: slideDown 0.4s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards; }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #020202; }
+        ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ef4444; }
+        
+        .elite-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            color: #e5e7eb;
+        }
+        .elite-input:focus {
+            background: rgba(220, 38, 38, 0.05);
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+            outline: none;
+        }
+        select.elite-input {
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23dc2626' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        select.elite-input option {
+            background-color: #020202;
+            color: #e5e7eb;
+            padding: 12px;
+        }
+        
+        .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1.0); }
+        .mobile-menu.open { transform: translateX(0); }
+        
+        .tab-active { background: rgba(220, 38, 38, 0.15); color: #ef4444; border-color: rgba(220, 38, 38, 0.5); box-shadow: 0 0 15px rgba(220, 38, 38, 0.1); }
+        .tab-inactive { background: rgba(255, 255, 255, 0.03); color: #9ca3af; border-color: rgba(255, 255, 255, 0.1); }
+        .tab-inactive:hover { background: rgba(255, 255, 255, 0.06); color: #e5e7eb; border-color: rgba(220, 38, 38, 0.3); }
+        
+        .float-whatsapp { animation: pulse-green 2s infinite; }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+        
+        .map-container iframe { transition: opacity 0.4s ease-in-out; }
+        .map-container.loading iframe { opacity: 0.3; }
+
+        .review-photo {
+            object-fit: cover; width: 100%; height: 100%;
+            filter: brightness(0.7) contrast(1.1) saturate(0.8);
+            transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+        }
+        .elite-card:hover .review-photo {
+            filter: brightness(0.9) contrast(1) saturate(1);
+            transform: scale(1.05);
+        }
+
+        .text-gradient-crimson {
+            background: linear-gradient(135deg, #f87171 0%, #dc2626 50%, #991b1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background: rgba(220, 38, 38, 0.05);
+            border-top: 1px solid rgba(220, 38, 38, 0.2);
+            border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        .ticker {
+            display: flex;
+            width: fit-content;
+            animation: ticker 40s linear infinite;
+        }
+        .ticker-item {
+            white-space: nowrap;
+            padding: 0 2rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .ticker-item i { color: #ef4444; }
+    </style>
+</head>
+<body class="bg-void text-gray-200 antialiased overflow-x-hidden selection:bg-crimson-600 selection:text-white">
+
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+    <div class="fixed inset-0 bg-noise pointer-events-none z-[100] opacity-30 mix-blend-overlay"></div>
+
+    <!-- Live Ticker -->
+    <div class="fixed top-20 w-full z-40 ticker-wrap hidden lg:block">
+        <div class="ticker">
+            <div class="ticker-item"><i class="fas fa-bolt"></i> LIVE: Kunhari Branch hitting 95% capacity today. Book your slot.</div>
+            <div class="ticker-item"><i class="fas fa-fire"></i> TIP: Stop ego lifting. Control the eccentric phase for 3 seconds.</div>
+            <div class="ticker-item"><i class="fas fa-tint"></i> HYDRATION: Drink 500ml of water right now. Your muscles are 75% water.</div>
+            <div class="ticker-item"><i class="fas fa-dumbbell"></i> NEW: Premium pre-workout now available at Gumanpura nutrition bar.</div>
+            <div class="ticker-item"><i class="fas fa-clock"></i> REMINDER: Last entry for tonight's Zumba class is in 45 minutes.</div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> LIVE: Kunhari Branch hitting 95% capacity today. Book your slot.</div>
+            <div class="ticker-item"><i class="fas fa-fire"></i> TIP: Stop ego lifting. Control the eccentric phase for 3 seconds.</div>
+            <div class="ticker-item"><i class="fas fa-tint"></i> HYDRATION: Drink 500ml of water right now. Your muscles are 75% water.</div>
+        </div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 bg-void/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center gap-3 group interactive-element">
+                    <div class="w-10 h-10 bg-crimson-600 rounded-sm flex items-center justify-center font-display font-bold text-white text-xl shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:shadow-[0_0_25px_rgba(220,38,38,0.8)] group-hover:rotate-12 transition-all duration-300">F</div>
+                    <span class="text-2xl font-display font-bold text-white tracking-wider">Fit<span class="text-crimson-500">X</span></span>
+                </a>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-gray-400 hover:text-crimson-400 transition-colors uppercase tracking-widest interactive-element">Home</a>
+                    <a href="#locations" class="text-sm font-medium text-gray-400 hover:text-crimson-400 transition-colors uppercase tracking-widest interactive-element">Locations</a>
+                    <a href="#services" class="text-sm font-medium text-gray-400 hover:text-crimson-400 transition-colors uppercase tracking-widest interactive-element">Services</a>
+                    <a href="#transformations" class="text-sm font-medium text-gray-400 hover:text-crimson-400 transition-colors uppercase tracking-widest interactive-element">Transformations</a>
+                    <a href="#trainers" class="text-sm font-medium text-gray-400 hover:text-crimson-400 transition-colors uppercase tracking-widest interactive-element">Trainers</a>
+                    <a href="#contact" class="elite-btn bg-crimson-600 hover:bg-crimson-500 text-white px-8 py-2.5 font-display font-bold text-lg uppercase tracking-wider shadow-[0_0_20px_rgba(220,38,38,0.3)] interactive-element">Join The Elite</a>
+                </div>
+                <button id="mobileMenuBtn" class="lg:hidden text-white text-xl w-10 h-10 flex items-center justify-center border border-white/10 rounded-sm hover:bg-white/5 transition interactive-element">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-surface z-[100] p-8 lg:hidden border-l border-crimson-900/50 shadow-2xl backdrop-blur-2xl">
+            <button id="closeMobileMenu" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl w-10 h-10 flex items-center justify-center border border-white/10 rounded-sm hover:bg-white/5 transition interactive-element"><i class="fas fa-times"></i></button>
+            <div class="mt-20 flex flex-col gap-6">
+                <a href="#home" class="text-gray-300 hover:text-crimson-400 text-lg font-display font-bold uppercase tracking-wider mobile-link interactive-element">Home</a>
+                <a href="#locations" class="text-gray-300 hover:text-crimson-400 text-lg font-display font-bold uppercase tracking-wider mobile-link interactive-element">Locations</a>
+                <a href="#services" class="text-gray-300 hover:text-crimson-400 text-lg font-display font-bold uppercase tracking-wider mobile-link interactive-element">Services</a>
+                <a href="#transformations" class="text-gray-300 hover:text-crimson-400 text-lg font-display font-bold uppercase tracking-wider mobile-link interactive-element">Transformations</a>
+                <a href="#trainers" class="text-gray-300 hover:text-crimson-400 text-lg font-display font-bold uppercase tracking-wider mobile-link interactive-element">Trainers</a>
+                <a href="#contact" class="elite-btn bg-crimson-600 text-white text-center py-3 font-display font-bold uppercase tracking-wider mt-4 mobile-link interactive-element">Join The Elite</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-32 overflow-hidden bg-void">
+        <div class="absolute inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-20"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(220,38,38,0.15)_0%,_transparent_60%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 border border-crimson-600/30 bg-crimson-950/50 rounded-sm px-4 py-1.5 mb-8 animate-fade-up opacity-0" style="animation-fill-mode: forwards;">
+                <span class="w-2 h-2 bg-crimson-500 rounded-full animate-pulse"></span>
+                <span class="text-crimson-400 font-display font-bold text-xs tracking-[0.2em] uppercase">Kota's #1 Premium Fitness Destination</span>
+            </div>
+            
+            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-display font-black text-white leading-[0.9] mb-6 animate-fade-up opacity-0 stagger-1" style="animation-fill-mode: forwards;">
+                AWAKEN YOUR<br>
+                <span class="text-gradient-crimson inline-block">TRUE POTENTIAL</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-gray-400 mb-4 font-medium animate-fade-up opacity-0 stagger-2" style="animation-fill-mode: forwards;">
+                3 Elite Locations · 1300+ Members · Master Trainers · Zumba · Strength
+            </p>
+            <p class="text-base text-gray-500 mb-10 max-w-2xl mx-auto animate-fade-up opacity-0 stagger-3" style="animation-fill-mode: forwards;">
+                Forge your legacy at FitX Gym. Experience advanced biomechanics, certified elite trainers, and an uncompromising environment for transformation.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up opacity-0 stagger-4" style="animation-fill-mode: forwards;">
+                <a href="#contact" class="elite-btn bg-crimson-600 hover:bg-crimson-500 text-white px-10 py-4 font-display font-bold text-lg uppercase tracking-wider shadow-[0_0_30px_rgba(220,38,38,0.4)] w-full sm:w-auto interactive-element">
+                    <i class="fas fa-bolt mr-2"></i>Start Transformation
+                </a>
+                <a href="https://wa.me/919352666274" target="_blank" class="elite-btn bg-surface hover:bg-surfaceLight border border-crimson-600/50 text-white px-10 py-4 font-display font-bold text-lg uppercase tracking-wider w-full sm:w-auto interactive-element">
+                    <i class="fab fa-whatsapp mr-2 text-green-500"></i>WhatsApp Elite
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-24 max-w-4xl mx-auto animate-fade-up opacity-0 stagger-4" style="animation-fill-mode: forwards;">
+                <div class="elite-card p-6 text-center interactive-element">
+                    <div class="text-4xl font-display font-black text-crimson-500 mb-1">3</div>
+                    <div class="text-gray-500 text-xs uppercase tracking-widest">Elite Locations</div>
+                </div>
+                <div class="elite-card p-6 text-center interactive-element">
+                    <div class="text-4xl font-display font-black text-crimson-500 mb-1">1300+</div>
+                    <div class="text-gray-500 text-xs uppercase tracking-widest">Active Members</div>
+                </div>
+                <div class="elite-card p-6 text-center interactive-element">
+                    <div class="text-4xl font-display font-black text-crimson-500 mb-1">15+</div>
+                    <div class="text-gray-500 text-xs uppercase tracking-widest">Master Trainers</div>
+                </div>
+                <div class="elite-card p-6 text-center interactive-element">
+                    <div class="text-4xl font-display font-black text-crimson-500 mb-1">4.9</div>
+                    <div class="text-gray-500 text-xs uppercase tracking-widest">Google Rating</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#locations" class="text-crimson-600/50 hover:text-crimson-500 transition text-2xl interactive-element"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <section id="locations" class="py-24 bg-surface relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(220,38,38,0.05)_0%,_transparent_50%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <span class="text-crimson-500 font-display font-bold tracking-[0.2em] text-sm uppercase">Our Strongholds</span>
+                <h2 class="text-5xl sm:text-6xl font-display font-black text-white mt-3">CHOOSE YOUR <span class="text-crimson-600">DOMAIN</span></h2>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="switchBranch('kunhari')" id="tab-kunhari" class="tab-active px-6 py-3 rounded-sm font-display font-bold text-sm uppercase tracking-wider border transition-all interactive-element">FitX Kunhari</button>
+                <button onclick="switchBranch('gumanpura')" id="tab-gumanpura" class="tab-inactive px-6 py-3 rounded-sm font-display font-bold text-sm uppercase tracking-wider border transition-all interactive-element">FitX Gumanpura</button>
+                <button onclick="switchBranch('station')" id="tab-station" class="tab-inactive px-6 py-3 rounded-sm font-display font-bold text-sm uppercase tracking-wider border transition-all interactive-element">FitX Station Road</button>
+            </div>
+
+            <div id="branch-content">
+                <div id="branch-kunhari" class="branch-detail animate-fade-up">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-3xl font-display font-black text-white mb-4 uppercase tracking-wide">FitX Gym <span class="text-crimson-500">Kunhari</span></h3>
+                            <p class="text-gray-400 text-base mb-6 leading-relaxed">The flagship facility. Featuring imported biomechanical equipment, a dedicated Olympic lifting platform, and an elite recovery zone.</p>
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="flex text-crimson-500 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <span class="text-white font-bold text-sm">4.9/5</span>
+                                <span class="text-gray-500 text-xs">(320+ Reviews)</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mb-8">
+                                <div class="elite-card p-4 interactive-element">
+                                    <i class="fas fa-clock text-crimson-500 text-lg mb-2"></i>
+                                    <div class="font-display font-bold text-white text-sm uppercase">Timings</div>
+                                    <div class="text-gray-400 text-xs">5:00 AM – 11:00 PM</div>
+                                </div>
+                                <div class="elite-card p-4 interactive-element">
+                                    <i class="fas fa-phone text-crimson-500 text-lg mb-2"></i>
+                                    <div class="font-display font-bold text-white text-sm uppercase">Command</div>
+                                    <div class="text-gray-400 text-xs">+91 6377463270</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="tel:+916377463270" class="elite-btn bg-crimson-600 hover:bg-crimson-500 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fas fa-phone mr-2"></i>Call Now</a>
+                                <a href="https://wa.me/916377463270" target="_blank" class="elite-btn bg-surface border border-crimson-600/50 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+                                <a href="https://www.google.com/maps/place/FITX+Gym+-+Gym+In+Kota+%7C%7C+Gym+In+Kunhari+Kota+%7C%7C/@25.1992085,75.8261987,79m/data=!3m1!1e3!4m10!1m2!2m1!1sFitx+gym+kunhari++Plot+no.+G-26+Behind+amar+panjabi+express,+lamdmark+city+kunhari+kota+!3m6!1s0x396f9b2aa306d3bd:0xd120d9431977d4b1!8m2!3d25.1992085!4d75.826597!15sClZGaXR4IGd5bSBrdW5oYXJpIFBsb3Qgbm8uIEctMjYgQmVoaW5kIGFtYXIgcHVuamFiaSBleHByZXNzLCBsYW5kbWFyayBjaXR5IGt1bmhhcmkga290YVpWIlRmaXR4IGd5bSBrdW5oYXJpIHBsb3Qgbm8gZyAyNiBiZWhpbmQgYW1hciBwdW5qYWJpIGV4cHJlc3MgbGFuZG1hcmsgY2l0eSBrdW5oYXJpIGtvdGGSAQNneW2aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjFPYkdWVk1EUmFSVnB2Vkc1YWVsTkVTbk5UV0VKTlltNU9TV1F6WXhBQuABAPoBBAgAEEw!16s%2Fg%2F11gn19c1tg?entry=ttu" target="_blank" class="elite-btn bg-surface border border-crimson-600/50 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fas fa-directions mr-2"></i>Directions</a>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-80 elite-card flex items-center justify-center animate-aura relative overflow-hidden interactive-element">
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80" alt="FitX Gym Kunhari Review Photo" class="review-photo absolute inset-0">
+                                <div class="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent"></div>
+                                <div class="relative z-10 bg-crimson-600/90 text-white px-4 py-2 rounded-sm font-display font-bold text-sm uppercase tracking-wider backdrop-blur-sm">
+                                    <i class="fas fa-camera mr-2"></i>Member Review Photo
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-cogs text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">Imported</div>
+                                </div>
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-hot-tub text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">Steam</div>
+                                </div>
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-music text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">Zumba</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="branch-gumanpura" class="branch-detail hidden animate-fade-up">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-3xl font-display font-black text-white mb-4 uppercase tracking-wide">FitX Gym <span class="text-crimson-500">Gumanpura</span></h3>
+                            <p class="text-gray-400 text-base mb-6 leading-relaxed">The heart of the city. Spacious workout zones, dedicated CrossFit rig, and a high-energy group class studio.</p>
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="flex text-crimson-500 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <span class="text-white font-bold text-sm">4.9/5</span>
+                                <span class="text-gray-500 text-xs">(280+ Reviews)</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mb-8">
+                                <div class="elite-card p-4 interactive-element">
+                                    <i class="fas fa-clock text-crimson-500 text-lg mb-2"></i>
+                                    <div class="font-display font-bold text-white text-sm uppercase">Timings</div>
+                                    <div class="text-gray-400 text-xs">5:00 AM – 11:00 PM</div>
+                                </div>
+                                <div class="elite-card p-4 interactive-element">
+                                    <i class="fas fa-phone text-crimson-500 text-lg mb-2"></i>
+                                    <div class="font-display font-bold text-white text-sm uppercase">Command</div>
+                                    <div class="text-gray-400 text-xs">+91 9352666274</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="tel:+919352666274" class="elite-btn bg-crimson-600 hover:bg-crimson-500 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fas fa-phone mr-2"></i>Call Now</a>
+                                <a href="https://wa.me/919352666274" target="_blank" class="elite-btn bg-surface border border-crimson-600/50 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+                                <a href="https://www.google.com/maps/place/Fitx+gumanpura+%7C+Gym+in+gumanpura+%7C+FITX+GYM/@25.1773156,75.7797153,10157m/data=!3m1!1e3!4m12!1m2!2m1!1sFitx+gym+gumanpura+Plot+no.+4+,+2nd+floor+Behind+partn+medical+store,+kothri+cicrle+,+gumanpura+kota+!3m8!1s0x396f9bc416144303:0x41a9dba21adc6533!8m2!3d25.1773156!4d75.8518131!9m1!1b1!15sCmVGaXR4IGd5bSBndW1hbnB1cmEgUGxvdCBuby4gNCAsIDJuZCBmbG9vciBCZWhpbmQgcGFyZW50cyBtZWRpY2FsIHN0b3JlLCBrb3RyaSBjaXJjbGUgLCBndW1hbnB1cmEga290YVphIl9maXR4IGd5bSBndW1hbnB1cmEgcGxvdCBubyA0IDJuZCBmbG9vciBiZWhpbmQgcGFyZW50cyBtZWRpY2FsIHN0b3JlIGtvdHJpIGNpcmNsZSBndW1hbnB1cmEga290YZIBA2d5beABAA!16s%2Fg%2F11h58fhvyn?entry=ttu" target="_blank" class="elite-btn bg-surface border border-crimson-600/50 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fas fa-directions mr-2"></i>Directions</a>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-80 elite-card flex items-center justify-center animate-aura relative overflow-hidden interactive-element">
+                                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80" alt="FitX Gym Gumanpura Review Photo" class="review-photo absolute inset-0">
+                                <div class="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent"></div>
+                                <div class="relative z-10 bg-crimson-600/90 text-white px-4 py-2 rounded-sm font-display font-bold text-sm uppercase tracking-wider backdrop-blur-sm">
+                                    <i class="fas fa-camera mr-2"></i>Member Review Photo
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-heartbeat text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">Cardio</div>
+                                </div>
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-users text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">Group</div>
+                                </div>
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-spa text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">Recovery</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="branch-station" class="branch-detail hidden animate-fade-up">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-3xl font-display font-black text-white mb-4 uppercase tracking-wide">FitX Gym <span class="text-crimson-500">Station Road</span></h3>
+                            <p class="text-gray-400 text-base mb-6 leading-relaxed">Strategic and accessible. Perfect for students and professionals. Featuring 24/7 access options and a dedicated boxing ring.</p>
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="flex text-crimson-500 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                                <span class="text-white font-bold text-sm">4.8/5</span>
+                                <span class="text-gray-500 text-xs">(250+ Reviews)</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mb-8">
+                                <div class="elite-card p-4 interactive-element">
+                                    <i class="fas fa-clock text-crimson-500 text-lg mb-2"></i>
+                                    <div class="font-display font-bold text-white text-sm uppercase">Timings</div>
+                                    <div class="text-gray-400 text-xs">5:00 AM – 11:00 PM</div>
+                                </div>
+                                <div class="elite-card p-4 interactive-element">
+                                    <i class="fas fa-phone text-crimson-500 text-lg mb-2"></i>
+                                    <div class="font-display font-bold text-white text-sm uppercase">Command</div>
+                                    <div class="text-gray-400 text-xs">+91 9079552912</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="tel:+919079552912" class="elite-btn bg-crimson-600 hover:bg-crimson-500 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fas fa-phone mr-2"></i>Call Now</a>
+                                <a href="https://wa.me/919079552912" target="_blank" class="elite-btn bg-surface border border-crimson-600/50 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+                                <a href="https://www.google.com/maps/place/Fitx+gym+station+%7C%7C+best+gym+in+Kota+%7C%7C+gym+in+station/@25.223147,75.8757549,19.5z/data=!3m1!5s0x396f9a5d85465f09:0xe924b3ab312f7deb!4m8!3m7!1s0x396f9b26b7f97d29:0x788b15dceb5622d4!8m2!3d25.2231068!4d75.8759658!9m1!1b1!16s%2Fg%2F11lg79gpks?entry=ttu" target="_blank" class="elite-btn bg-surface border border-crimson-600/50 text-white px-6 py-3 font-display font-bold text-sm uppercase tracking-wider interactive-element"><i class="fas fa-directions mr-2"></i>Directions</a>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-80 elite-card flex items-center justify-center animate-aura relative overflow-hidden interactive-element">
+                                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&q=80" alt="FitX Gym Station Road Review Photo" class="review-photo absolute inset-0">
+                                <div class="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent"></div>
+                                <div class="relative z-10 bg-crimson-600/90 text-white px-4 py-2 rounded-sm font-display font-bold text-sm uppercase tracking-wider backdrop-blur-sm">
+                                    <i class="fas fa-camera mr-2"></i>Member Review Photo
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-bolt text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">24/7</div>
+                                </div>
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-wifi text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">WiFi</div>
+                                </div>
+                                <div class="elite-card p-4 text-center interactive-element">
+                                    <i class="fas fa-parking text-crimson-500 text-xl mb-2"></i>
+                                    <div class="text-xs text-gray-400 font-display uppercase tracking-wider">Parking</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-display font-black text-white uppercase">Locate Us on Google Maps</h3>
+                    <p class="text-gray-500 text-sm mt-2">Select a location to view the exact coordinates</p>
+                </div>
+                <div class="elite-card p-2 h-[500px] w-full mb-6 relative overflow-hidden map-container interactive-element" id="mapContainer">
+                    <iframe id="branchMap" src="https://maps.google.com/maps?q=25.1992085,75.826597&z=15&output=embed" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.8) contrast(1.2);" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="updateMap('kunhari')" class="map-btn elite-btn bg-crimson-600 hover:bg-crimson-500 text-white px-8 py-3 font-display font-bold text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(220,38,38,0.3)] transition-all interactive-element" data-location="kunhari">
+                        <i class="fas fa-map-marker-alt mr-2"></i>FitX Kunhari
+                    </button>
+                    <button onclick="updateMap('gumanpura')" class="map-btn elite-btn bg-surface border border-crimson-600/50 hover:bg-crimson-600/20 text-white px-8 py-3 font-display font-bold text-sm uppercase tracking-wider transition-all interactive-element" data-location="gumanpura">
+                        <i class="fas fa-map-marker-alt mr-2"></i>FitX Gumanpura
+                    </button>
+                    <button onclick="updateMap('station')" class="map-btn elite-btn bg-surface border border-crimson-600/50 hover:bg-crimson-600/20 text-white px-8 py-3 font-display font-bold text-sm uppercase tracking-wider transition-all interactive-element" data-location="station">
+                        <i class="fas fa-map-marker-alt mr-2"></i>FitX Station Road
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <h3 class="text-2xl font-display font-black text-white mb-6 uppercase text-center">Frequently Asked Questions</h3>
+                <div class="max-w-3xl mx-auto space-y-3">
+                    <details class="elite-card p-5 group interactive-element">
+                        <summary class="font-display font-bold text-white cursor-pointer flex justify-between items-center text-sm uppercase"><span>What are gym timings?</span><i class="fas fa-chevron-down text-crimson-500 group-open:rotate-180 transition"></i></summary>
+                        <p class="text-gray-400 mt-3 text-sm">We are open from 5:00 AM to 11:00 PM, Monday to Sunday, including holidays. No excuses.</p>
+                    </details>
+                    <details class="elite-card p-5 group interactive-element">
+                        <summary class="font-display font-bold text-white cursor-pointer flex justify-between items-center text-sm uppercase"><span>Do you offer personal training?</span><i class="fas fa-chevron-down text-crimson-500 group-open:rotate-180 transition"></i></summary>
+                        <p class="text-gray-400 mt-3 text-sm">Yes! We have 15+ certified personal trainers who specialize in making your excuses invalid and your results undeniable.</p>
+                    </details>
+                    <details class="elite-card p-5 group interactive-element">
+                        <summary class="font-display font-bold text-white cursor-pointer flex justify-between items-center text-sm uppercase"><span>Do you have steam facilities?</span><i class="fas fa-chevron-down text-crimson-500 group-open:rotate-180 transition"></i></summary>
+                        <p class="text-gray-400 mt-3 text-sm">Yes, all our branches have premium steam and recovery facilities. Because suffering is optional after the workout.</p>
+                    </details>
+                    <details class="elite-card p-5 group interactive-element">
+                        <summary class="font-display font-bold text-white cursor-pointer flex justify-between items-center text-sm uppercase"><span>Is parking available?</span><i class="fas fa-chevron-down text-crimson-500 group-open:rotate-180 transition"></i></summary>
+                        <p class="text-gray-400 mt-3 text-sm">Yes, we have dedicated, secure parking space for both two-wheelers and four-wheelers at all branches.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transformations" class="py-24 bg-void relative">
+        <div class="absolute inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <span class="text-crimson-500 font-display font-bold tracking-[0.2em] text-sm uppercase">Proof of Concept</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-black text-white mt-3">VERIFIED <span class="text-crimson-600">PROGRESS LOGS</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-base">Real data. Real results. No fake photos. Our biometric tracking system verifies every milestone.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterTransformations('all')" class="transform-filter tab-active px-5 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider border interactive-element">All Logs</button>
+                <button onclick="filterTransformations('fat-loss')" class="transform-filter tab-inactive px-5 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider border interactive-element">Fat Loss</button>
+                <button onclick="filterTransformations('muscle-gain')" class="transform-filter tab-inactive px-5 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider border interactive-element">Muscle Gain</button>
+                <button onclick="filterTransformations('recomposition')" class="transform-filter tab-inactive px-5 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider border interactive-element">Recomposition</button>
+            </div>
+
+            <div id="transformations-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="transform-item fat-loss elite-card p-6 relative overflow-hidden interactive-element">
+                    <div class="absolute top-4 right-4 flex items-center gap-2 bg-green-500/20 text-green-400 px-3 py-1 rounded-sm text-xs font-bold uppercase border border-green-500/30">
+                        <i class="fas fa-check-circle"></i> FitX Verified
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white uppercase mb-4">Rahul Sharma</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-void/50 p-3 rounded-sm border border-white/5">
+                            <div class="text-gray-500 text-xs uppercase mb-1">Starting Weight</div>
+                            <div class="text-2xl font-display font-bold text-gray-400">95 kg</div>
+                        </div>
+                        <div class="bg-void/50 p-3 rounded-sm border border-crimson-600/30">
+                            <div class="text-crimson-400 text-xs uppercase mb-1">Current Weight</div>
+                            <div class="text-2xl font-display font-bold text-crimson-500">77 kg</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Body Fat Reduction</span><span class="text-crimson-400">-12%</span></div>
+                            <div class="w-full bg-void rounded-full h-2"><div class="bg-crimson-600 h-2 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.8)]" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Strength Gain (Squat)</span><span class="text-blue-400">+40 kg</span></div>
+                            <div class="w-full bg-void rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.8)]" style="width: 70%"></div></div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/5 pt-4">
+                        <p class="text-gray-500 text-xs italic mb-2">"The data doesn't lie. 12 weeks of strict protocol adherence and zero cheat days."</p>
+                        <div class="flex items-center gap-2 text-xs text-gray-600">
+                            <i class="fas fa-map-marker-alt text-crimson-600"></i> FitX Kunhari · <i class="fas fa-clock text-crimson-600 ml-2"></i> 12 Weeks
+                        </div>
+                    </div>
+                </div>
+
+                <div class="transform-item muscle-gain elite-card p-6 relative overflow-hidden interactive-element">
+                    <div class="absolute top-4 right-4 flex items-center gap-2 bg-blue-500/20 text-blue-400 px-3 py-1 rounded-sm text-xs font-bold uppercase border border-blue-500/30">
+                        <i class="fas fa-check-circle"></i> FitX Verified
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white uppercase mb-4">Vikram Singh</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-void/50 p-3 rounded-sm border border-white/5">
+                            <div class="text-gray-500 text-xs uppercase mb-1">Starting Weight</div>
+                            <div class="text-2xl font-display font-bold text-gray-400">62 kg</div>
+                        </div>
+                        <div class="bg-void/50 p-3 rounded-sm border border-blue-600/30">
+                            <div class="text-blue-400 text-xs uppercase mb-1">Current Weight</div>
+                            <div class="text-2xl font-display font-bold text-blue-500">70 kg</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Lean Muscle Mass</span><span class="text-blue-400">+8 kg</span></div>
+                            <div class="w-full bg-void rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.8)]" style="width: 92%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Bench Press PR</span><span class="text-crimson-400">+15 kg</span></div>
+                            <div class="w-full bg-void rounded-full h-2"><div class="bg-crimson-600 h-2 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.8)]" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/5 pt-4">
+                        <p class="text-gray-500 text-xs italic mb-2">"Progressive overload programming is scientifically precise. Gained pure mass, zero fat."</p>
+                        <div class="flex items-center gap-2 text-xs text-gray-600">
+                            <i class="fas fa-map-marker-alt text-crimson-600"></i> FitX Gumanpura · <i class="fas fa-clock text-crimson-600 ml-2"></i> 6 Months
+                        </div>
+                    </div>
+                </div>
+
+                <div class="transform-item recomposition elite-card p-6 relative overflow-hidden interactive-element">
+                    <div class="absolute top-4 right-4 flex items-center gap-2 bg-purple-500/20 text-purple-400 px-3 py-1 rounded-sm text-xs font-bold uppercase border border-purple-500/30">
+                        <i class="fas fa-check-circle"></i> FitX Verified
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white uppercase mb-4">Priya Patel</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-void/50 p-3 rounded-sm border border-white/5">
+                            <div class="text-gray-500 text-xs uppercase mb-1">Starting BF%</div>
+                            <div class="text-2xl font-display font-bold text-gray-400">32%</div>
+                        </div>
+                        <div class="bg-void/50 p-3 rounded-sm border border-purple-600/30">
+                            <div class="text-purple-400 text-xs uppercase mb-1">Current BF%</div>
+                            <div class="text-2xl font-display font-bold text-purple-500">21%</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Body Recomposition</span><span class="text-purple-400">Optimal</span></div>
+                            <div class="w-full bg-void rounded-full h-2"><div class="bg-purple-600 h-2 rounded-full shadow-[0_0_10px_rgba(147,51,234,0.8)]" style="width: 100%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Resting Heart Rate</span><span class="text-green-400">-12 BPM</span></div>
+                            <div class="w-full bg-void rounded-full h-2"><div class="bg-green-600 h-2 rounded-full shadow-[0_0_10px_rgba(22,163,74,0.8)]" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/5 pt-4">
+                        <p class="text-gray-500 text-xs italic mb-2">"Complete physiological overhaul. Lost fat and built muscle simultaneously. Unmatched synergy."</p>
+                        <div class="flex items-center gap-2 text-xs text-gray-600">
+                            <i class="fas fa-map-marker-alt text-crimson-600"></i> FitX Station Road · <i class="fas fa-clock text-crimson-600 ml-2"></i> 4 Months
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="py-24 bg-surface relative">
+        <div class="absolute inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <span class="text-crimson-500 font-display font-bold tracking-[0.2em] text-sm uppercase">The Vanguard</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-black text-white mt-3">ELITE <span class="text-crimson-600">COACHES</span></h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="elite-card overflow-hidden group interactive-element">
+                    <div class="h-40 bg-gradient-to-br from-crimson-900/40 to-void flex items-center justify-center relative overflow-hidden border-b border-crimson-600/20">
+                        <div class="absolute inset-0 bg-grid-pattern bg-[size:20px_20px] opacity-20"></div>
+                        <div class="w-20 h-20 bg-void border-2 border-crimson-600 rounded-sm flex items-center justify-center shadow-[0_0_20px_rgba(220,38,38,0.3)] group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative z-10">
+                            <i class="fas fa-dumbbell text-3xl text-crimson-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-white uppercase">Rajesh Kumar</h3>
+                        <p class="text-crimson-500 font-display font-medium text-sm mb-3 uppercase tracking-wider">Head Trainer • 8 Yrs</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-white">200+</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Clients Transformed</div>
+                            </div>
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-crimson-500">98%</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Success Rate</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-xs mb-4 italic leading-relaxed">"Will make you hate him for 1 hour, love him for a lifetime. Specializes in making gravity feel heavier than it actually is."</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">ACE Certified</span>
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">ISSA</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center border border-crimson-600/30 hover:bg-crimson-600 hover:text-white text-crimson-500 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider transition interactive-element">Book Session</a>
+                    </div>
+                </div>
+
+                <div class="elite-card overflow-hidden group interactive-element">
+                    <div class="h-40 bg-gradient-to-br from-blue-900/40 to-void flex items-center justify-center relative overflow-hidden border-b border-blue-600/20">
+                        <div class="absolute inset-0 bg-grid-pattern bg-[size:20px_20px] opacity-20"></div>
+                        <div class="w-20 h-20 bg-void border-2 border-blue-600 rounded-sm flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative z-10">
+                            <i class="fas fa-fire text-3xl text-blue-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-white uppercase">Priya Sharma</h3>
+                        <p class="text-blue-500 font-display font-medium text-sm mb-3 uppercase tracking-wider">Cardio Expert • 5 Yrs</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-white">150+</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Clients Transformed</div>
+                            </div>
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-blue-500">95%</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Success Rate</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-xs mb-4 italic leading-relaxed">"Will out-dance you, out-sweat you, and still have the energy to mock your resting heart rate. NASM Certified."</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">Zumba Licensed</span>
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">NASM</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center border border-blue-600/30 hover:bg-blue-600 hover:text-white text-blue-500 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider transition interactive-element">Book Session</a>
+                    </div>
+                </div>
+
+                <div class="elite-card overflow-hidden group interactive-element">
+                    <div class="h-40 bg-gradient-to-br from-purple-900/40 to-void flex items-center justify-center relative overflow-hidden border-b border-purple-600/20">
+                        <div class="absolute inset-0 bg-grid-pattern bg-[size:20px_20px] opacity-20"></div>
+                        <div class="w-20 h-20 bg-void border-2 border-purple-600 rounded-sm flex items-center justify-center shadow-[0_0_20px_rgba(147,51,234,0.3)] group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative z-10">
+                            <i class="fas fa-bolt text-3xl text-purple-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-white uppercase">Vikram Singh</h3>
+                        <p class="text-purple-500 font-display font-medium text-sm mb-3 uppercase tracking-wider">Functional • 6 Yrs</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-white">180+</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Clients Transformed</div>
+                            </div>
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-purple-500">97%</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Success Rate</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-xs mb-4 italic leading-relaxed">"Believes sitting is the new smoking. Will make you move in ways you didn't know your joints could handle."</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">CrossFit L2</span>
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">ACE</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center border border-purple-600/30 hover:bg-purple-600 hover:text-white text-purple-500 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider transition interactive-element">Book Session</a>
+                    </div>
+                </div>
+
+                <div class="elite-card overflow-hidden group interactive-element">
+                    <div class="h-40 bg-gradient-to-br from-green-900/40 to-void flex items-center justify-center relative overflow-hidden border-b border-green-600/20">
+                        <div class="absolute inset-0 bg-grid-pattern bg-[size:20px_20px] opacity-20"></div>
+                        <div class="w-20 h-20 bg-void border-2 border-green-600 rounded-sm flex items-center justify-center shadow-[0_0_20px_rgba(22,163,74,0.3)] group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative z-10">
+                            <i class="fas fa-apple-alt text-3xl text-green-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-white uppercase">Ankit Jain</h3>
+                        <p class="text-green-500 font-display font-medium text-sm mb-3 uppercase tracking-wider">Nutrition & PT • 4 Yrs</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-white">120+</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Clients Transformed</div>
+                            </div>
+                            <div class="bg-void/50 p-2 rounded-sm text-center border border-white/5">
+                                <div class="text-lg font-display font-bold text-green-500">99%</div>
+                                <div class="text-[10px] text-gray-500 uppercase">Success Rate</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-xs mb-4 italic leading-relaxed">"Will judge your cheat meals, but will also make sure you earn them. Expert in making broccoli taste like a reward."</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">ISSA Nutrition</span>
+                            <span class="bg-void border border-white/10 text-gray-400 text-[10px] px-2 py-1 rounded-sm font-medium uppercase">ACE</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center border border-green-600/30 hover:bg-green-600 hover:text-white text-green-500 py-2 rounded-sm font-display font-bold text-xs uppercase tracking-wider transition interactive-element">Book Session</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-void relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 mb-4">
+                    <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                    <span class="text-crimson-500 font-display font-bold tracking-[0.2em] text-sm uppercase">Real-Time Fitness Intel</span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-display font-black text-white mt-3">LIVE <span class="text-crimson-600">UPDATES & TIPS</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Tip 1 -->
+                <article class="elite-card overflow-hidden group cursor-pointer interactive-element" id="tip-card-1">
+                    <div class="h-48 bg-crimson-900/20 flex items-center justify-center border-b border-crimson-600/20 relative">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase animate-pulse">Live Tip</div>
+                        <i class="fas fa-dumbbell text-5xl text-crimson-600/30 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-crimson-900/50 text-crimson-400 border border-crimson-600/30 text-xs font-bold px-3 py-1 rounded-sm uppercase">Form Check</span>
+                            <span class="text-gray-600 text-xs">Just Now</span>
+                        </div>
+                        <h3 class="text-lg font-display font-bold text-white mb-3 uppercase group-hover:text-crimson-500 transition">Stop Ego Lifting on Deadlifts</h3>
+                        <p class="text-gray-500 text-xs mb-4">Your spine is not a crane. Keep your back neutral, engage your lats, and drive through your heels. Quality over quantity, always.</p>
+                        <button onclick="toggleTip(1)" class="text-crimson-500 font-display font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                            <span id="tip-btn-text-1">Read Full Protocol</span> <i class="fas fa-arrow-right" id="tip-icon-1"></i>
+                        </button>
+                        
+                        <!-- Expandable Live Intel Feed -->
+                        <div id="tip-content-1" class="hidden mt-4 pt-4 border-t border-crimson-600/30">
+                            <h4 class="text-crimson-400 font-display font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> Live Intel Feed
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-void/50 p-3 rounded-sm border-l-2 border-crimson-600 animate-slide-down">
+                                    <div class="flex justify-between text-[10px] text-gray-500 mb-1">
+                                        <span>Coach Rajesh</span>
+                                        <span>2 mins ago</span>
+                                    </div>
+                                    <p class="text-gray-300 text-xs">"Remember: The eccentric (lowering) phase of the rep is where 70% of muscle growth happens. Don't rush it."</p>
+                                </div>
+                                <div class="bg-void/50 p-3 rounded-sm border-l-2 border-blue-600 animate-slide-down" style="animation-delay: 0.1s;">
+                                    <div class="flex justify-between text-[10px] text-gray-500 mb-1">
+                                        <span>Coach Priya</span>
+                                        <span>15 mins ago</span>
+                                    </div>
+                                    <p class="text-gray-300 text-xs">"Zumba class tonight is at 80% capacity. Secure your spot via the app or front desk now!"</p>
+                                </div>
+                                <div class="bg-void/50 p-3 rounded-sm border-l-2 border-green-600 animate-slide-down" style="animation-delay: 0.2s;">
+                                    <div class="flex justify-between text-[10px] text-gray-500 mb-1">
+                                        <span>Nutrition AI</span>
+                                        <span>1 hour ago</span>
+                                    </div>
+                                    <p class="text-gray-300 text-xs">"Post-workout window is open. Consume 25g of protein within 45 minutes for optimal glycogen replenishment."</p>
+                                </div>
+                            </div>
+                            <button onclick="toggleTip(1)" class="mt-4 text-xs text-gray-500 hover:text-white uppercase tracking-wider flex items-center gap-1 transition-all">
+                                <i class="fas fa-chevron-up"></i> Close Feed
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tip 2 -->
+                <article class="elite-card overflow-hidden group cursor-pointer interactive-element" id="tip-card-2">
+                    <div class="h-48 bg-crimson-900/20 flex items-center justify-center border-b border-crimson-600/20 relative">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase">Hydration</div>
+                        <i class="fas fa-tint text-5xl text-blue-600/30 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-blue-900/50 text-blue-400 border border-blue-600/30 text-xs font-bold px-3 py-1 rounded-sm uppercase">Nutrition</span>
+                            <span class="text-gray-600 text-xs">2 Hours Ago</span>
+                        </div>
+                        <h3 class="text-lg font-display font-bold text-white mb-3 uppercase group-hover:text-blue-500 transition">The 500ml Rule</h3>
+                        <p class="text-gray-500 text-xs mb-4">Drink 500ml of water immediately upon waking up. Your muscles are 75% water, and you just spent 8 hours dehydrating them.</p>
+                        <button onclick="toggleTip(2)" class="text-blue-500 font-display font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                            <span id="tip-btn-text-2">Read Full Protocol</span> <i class="fas fa-arrow-right" id="tip-icon-2"></i>
+                        </button>
+                        
+                        <div id="tip-content-2" class="hidden mt-4 pt-4 border-t border-blue-600/30">
+                            <h4 class="text-blue-400 font-display font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> Live Intel Feed
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-void/50 p-3 rounded-sm border-l-2 border-blue-600 animate-slide-down">
+                                    <div class="flex justify-between text-[10px] text-gray-500 mb-1">
+                                        <span>Coach Ankit</span>
+                                        <span>10 mins ago</span>
+                                    </div>
+                                    <p class="text-gray-300 text-xs">"Electrolytes matter. If you're sweating heavily, add a pinch of Himalayan salt to your water."</p>
+                                </div>
+                                <div class="bg-void/50 p-3 rounded-sm border-l-2 border-crimson-600 animate-slide-down" style="animation-delay: 0.1s;">
+                                    <div class="flex justify-between text-[10px] text-gray-500 mb-1">
+                                        <span>System Alert</span>
+                                        <span>45 mins ago</span>
+                                    </div>
+                                    <p class="text-gray-300 text-xs">"Kunhari branch water cooler refurbished. Fresh, chilled, and filtered water available at the entrance."</p>
+                                </div>
+                            </div>
+                            <button onclick="toggleTip(2)" class="mt-4 text-xs text-gray-500 hover:text-white uppercase tracking-wider flex items-center gap-1 transition-all">
+                                <i class="fas fa-chevron-up"></i> Close Feed
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tip 3 -->
+                <article class="elite-card overflow-hidden group cursor-pointer interactive-element" id="tip-card-3">
+                    <div class="h-48 bg-crimson-900/20 flex items-center justify-center border-b border-crimson-600/20 relative">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase">Recovery</div>
+                        <i class="fas fa-bed text-5xl text-purple-600/30 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-purple-900/50 text-purple-400 border border-purple-600/30 text-xs font-bold px-3 py-1 rounded-sm uppercase">Sleep</span>
+                            <span class="text-gray-600 text-xs">5 Hours Ago</span>
+                        </div>
+                        <h3 class="text-lg font-display font-bold text-white mb-3 uppercase group-hover:text-purple-500 transition">Muscles Grow in Bed, Not Gym</h3>
+                        <p class="text-gray-500 text-xs mb-4">You break muscle in the gym. You build it in bed. Aim for 7-9 hours of quality sleep. No exceptions, no 'hustle culture' nonsense.</p>
+                        <button onclick="toggleTip(3)" class="text-purple-500 font-display font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                            <span id="tip-btn-text-3">Read Full Protocol</span> <i class="fas fa-arrow-right" id="tip-icon-3"></i>
+                        </button>
+                        
+                        <div id="tip-content-3" class="hidden mt-4 pt-4 border-t border-purple-600/30">
+                            <h4 class="text-purple-400 font-display font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span> Live Intel Feed
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-void/50 p-3 rounded-sm border-l-2 border-purple-600 animate-slide-down">
+                                    <div class="flex justify-between text-[10px] text-gray-500 mb-1">
+                                        <span>Coach Vikram</span>
+                                        <span>30 mins ago</span>
+                                    </div>
+                                    <p class="text-gray-300 text-xs">"No screens 30 mins before bed. The blue light destroys your melatonin production. Read a book instead."</p>
+                                </div>
+                                <div class="bg-void/50 p-3 rounded-sm border-l-2 border-green-600 animate-slide-down" style="animation-delay: 0.1s;">
+                                    <div class="flex justify-between text-[10px] text-gray-500 mb-1">
+                                        <span>Recovery Zone</span>
+                                        <span>2 hours ago</span>
+                                    </div>
+                                    <p class="text-gray-300 text-xs">"Steam room at Gumanpura is currently at optimal temperature (45°C). Perfect for post-leg day recovery."</p>
+                                </div>
+                            </div>
+                            <button onclick="toggleTip(3)" class="mt-4 text-xs text-gray-500 hover:text-white uppercase tracking-wider flex items-center gap-1 transition-all">
+                                <i class="fas fa-chevron-up"></i> Close Feed
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="py-24 bg-surface relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-crimson-500 font-display font-bold tracking-[0.2em] text-sm uppercase">Access Levels</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-black text-white mt-3">CHOOSE YOUR <span class="text-crimson-600">TIER</span></h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="elite-card p-8 relative interactive-element">
+                    <div class="text-center">
+                        <h3 class="text-lg font-display font-bold text-white mb-2 uppercase tracking-wider">Monthly</h3>
+                        <div class="text-4xl font-display font-black text-crimson-500 mb-1">₹1,499</div>
+                        <div class="text-gray-600 text-xs mb-6 uppercase tracking-wider">per month</div>
+                        <ul class="text-left space-y-3 mb-8 text-gray-400 text-xs">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Full Facility Access</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Cardio Zone</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Locker Facility</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Steam Access</li>
+                        </ul>
+                        <button onclick="initiatePayment('Monthly Membership', 1499)" class="block w-full border border-crimson-600/30 hover:bg-crimson-600 hover:text-white text-white py-3 rounded-sm font-display font-bold text-sm uppercase tracking-wider transition interactive-element">Initialize Payment</button>
+                    </div>
+                </div>
+                <div class="elite-card p-8 relative border-crimson-600/50 shadow-[0_0_30px_rgba(220,38,38,0.1)] interactive-element">
+                    <div class="absolute -top-3 right-6 bg-crimson-600 text-white text-xs font-display font-bold px-3 py-1 rounded-sm uppercase tracking-wider">Popular</div>
+                    <div class="text-center">
+                        <h3 class="text-lg font-display font-bold text-white mb-2 uppercase tracking-wider">Quarterly</h3>
+                        <div class="text-4xl font-display font-black text-crimson-500 mb-1">₹3,999</div>
+                        <div class="text-gray-600 text-xs mb-6 uppercase tracking-wider">3 months (Save 11%)</div>
+                        <ul class="text-left space-y-3 mb-8 text-gray-400 text-xs">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Full Facility Access</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Cardio Zone</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Locker Facility</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Steam Access</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>2 PT Sessions</li>
+                        </ul>
+                        <button onclick="initiatePayment('Quarterly Membership', 3999)" class="block w-full bg-crimson-600 hover:bg-crimson-500 text-white py-3 rounded-sm font-display font-bold text-sm uppercase tracking-wider elite-btn interactive-element">Initialize Payment</button>
+                    </div>
+                </div>
+                <div class="elite-card p-8 relative interactive-element">
+                    <div class="text-center">
+                        <h3 class="text-lg font-display font-bold text-white mb-2 uppercase tracking-wider">Half-Yearly</h3>
+                        <div class="text-4xl font-display font-black text-crimson-500 mb-1">₹6,999</div>
+                        <div class="text-gray-600 text-xs mb-6 uppercase tracking-wider">6 months (Save 22%)</div>
+                        <ul class="text-left space-y-3 mb-8 text-gray-400 text-xs">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Full Facility Access</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>All Zones</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Premium Locker</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Unlimited Steam</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>6 PT Sessions</li>
+                        </ul>
+                        <button onclick="initiatePayment('Half-Yearly Membership', 6999)" class="block w-full border border-crimson-600/30 hover:bg-crimson-600 hover:text-white text-white py-3 rounded-sm font-display font-bold text-sm uppercase tracking-wider transition interactive-element">Initialize Payment</button>
+                    </div>
+                </div>
+                <div class="elite-card p-8 relative border-crimson-600/50 bg-crimson-900/10 interactive-element">
+                    <div class="absolute -top-3 right-6 bg-white text-void text-xs font-display font-bold px-3 py-1 rounded-sm uppercase tracking-wider">Elite</div>
+                    <div class="text-center">
+                        <h3 class="text-lg font-display font-bold text-white mb-2 uppercase tracking-wider">Annual</h3>
+                        <div class="text-4xl font-display font-black text-crimson-500 mb-1">₹11,999</div>
+                        <div class="text-gray-600 text-xs mb-6 uppercase tracking-wider">12 months (Save 33%)</div>
+                        <ul class="text-left space-y-3 mb-8 text-gray-400 text-xs">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>VIP Facility Access</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>All Zones + Guest Pass</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>VIP Locker</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>Unlimited Recovery</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-crimson-600"></i>12 PT + Custom Diet</li>
+                        </ul>
+                        <button onclick="initiatePayment('Annual Elite Membership', 11999)" class="block w-full bg-white hover:bg-gray-200 text-void py-3 rounded-sm font-display font-bold text-sm uppercase tracking-wider elite-btn interactive-element">Initialize Payment</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-500 text-sm mb-4"><i class="fas fa-shield-alt text-crimson-600 mr-2"></i>Secured by Razorpay · 100% Refundable within 7 days</p>
+                <a href="#contact" class="inline-block bg-surface border border-crimson-600/50 hover:bg-crimson-600/10 text-white px-10 py-4 rounded-sm font-display font-bold text-base uppercase tracking-widest transition interactive-element">
+                    <i class="fas fa-user-plus mr-2"></i>Get Personalized Membership Plan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-void relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(220,38,38,0.1)_0%,_transparent_50%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <span class="text-crimson-500 font-display font-bold tracking-[0.2em] text-sm uppercase">Initiate Contact</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-black text-white mt-3">BEGIN YOUR <span class="text-crimson-600">ASCENSION</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-base">Submit your coordinates. Our elite team will establish contact within 24 hours.</p>
+            </div>
+            <div class="max-w-3xl mx-auto elite-card p-8 sm:p-12 shadow-[0_0_50px_rgba(220,38,38,0.1)] interactive-element">
+                <form id="leadForm" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-400 font-display font-bold mb-2 text-sm uppercase tracking-wider">Full Name *</label>
+                            <input type="text" id="formName" required class="elite-input w-full rounded-sm px-5 py-4 text-sm" placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 font-display font-bold mb-2 text-sm uppercase tracking-wider">Phone Number *</label>
+                            <input type="tel" id="formPhone" required class="elite-input w-full rounded-sm px-5 py-4 text-sm" placeholder="+91 98765 43210">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-400 font-display font-bold mb-2 text-sm uppercase tracking-wider">Preferred Location *</label>
+                            <select id="formBranch" required class="elite-input w-full rounded-sm px-5 py-4 text-sm">
+                                <option value="">Select Stronghold</option>
+                                <option value="kunhari">FitX Gym Kunhari</option>
+                                <option value="gumanpura">FitX Gym Gumanpura</option>
+                                <option value="station">FitX Gym Station Road</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 font-display font-bold mb-2 text-sm uppercase tracking-wider">Primary Objective *</label>
+                            <select id="formGoal" required class="elite-input w-full rounded-sm px-5 py-4 text-sm">
+                                <option value="">Select Goal</option>
+                                <option value="weight-loss">Weight Loss</option>
+                                <option value="muscle-gain">Muscle Gain</option>
+                                <option value="strength">Strength Training</option>
+                                <option value="cardio">Cardio & Endurance</option>
+                                <option value="zumba">Zumba & Dance</option>
+                                <option value="general">General Fitness</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-400 font-display font-bold mb-2 text-sm uppercase tracking-wider">Additional Intel (Optional)</label>
+                        <textarea id="formMessage" rows="4" class="elite-input w-full rounded-sm px-5 py-4 text-sm" placeholder="Detail your fitness history or specific goals..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-crimson-600 hover:bg-crimson-500 text-white py-4 rounded-sm font-display font-bold text-base uppercase tracking-widest elite-btn shadow-[0_0_30px_rgba(220,38,38,0.3)] interactive-element">
+                        <i class="fas fa-paper-plane mr-2"></i>Transmit Inquiry
+                    </button>
+                </form>
+                <div id="formSuccess" class="hidden text-center py-12">
+                    <div class="w-20 h-20 bg-crimson-600 rounded-sm flex items-center justify-center mx-auto mb-6 animate-fade-up shadow-[0_0_30px_rgba(220,38,38,0.5)]">
+                        <i class="fas fa-check text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold text-white mb-2 uppercase">Transmission Received</h3>
+                    <p class="text-gray-500 text-sm">Your inquiry has been logged. Our elite team will establish contact shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-void border-t border-crimson-900/30 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#home" class="flex items-center gap-3 mb-6 interactive-element">
+                        <div class="w-10 h-10 bg-crimson-600 rounded-sm flex items-center justify-center font-display font-bold text-white text-xl shadow-[0_0_15px_rgba(220,38,38,0.5)]">F</div>
+                        <span class="text-2xl font-display font-bold text-white tracking-wider">Fit<span class="text-crimson-500">X</span></span>
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed">Kota's elite fitness destination. 3 locations, 1300+ members, uncompromising standards.</p>
+                    <div class="flex gap-3 mt-6">
+                        <a href="#" class="w-10 h-10 bg-surface border border-white/10 rounded-sm flex items-center justify-center text-gray-400 hover:bg-crimson-600 hover:text-white hover:border-crimson-600 transition-all duration-300 interactive-element"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-surface border border-white/10 rounded-sm flex items-center justify-center text-gray-400 hover:bg-crimson-600 hover:text-white hover:border-crimson-600 transition-all duration-300 interactive-element"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-surface border border-white/10 rounded-sm flex items-center justify-center text-gray-400 hover:bg-crimson-600 hover:text-white hover:border-crimson-600 transition-all duration-300 interactive-element"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-display font-bold text-base mb-6 uppercase tracking-wider">FitX Kunhari</h4>
+                    <ul class="space-y-4 text-gray-500 text-xs">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-crimson-600 mt-1"></i><span>Plot no. G-26 Behind amar panjabi express, landmark city kunhari kota</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone text-crimson-600"></i><a href="tel:+916377463270" class="hover:text-crimson-500 transition interactive-element">+91 6377463270</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-display font-bold text-base mb-6 uppercase tracking-wider">FitX Gumanpura</h4>
+                    <ul class="space-y-4 text-gray-500 text-xs">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-crimson-600 mt-1"></i><span>Plot no. 4, 2nd floor Behind partn medical store, kothri circle, gumanpura kota</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone text-crimson-600"></i><a href="tel:+919352666274" class="hover:text-crimson-500 transition interactive-element">+91 9352666274</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-display font-bold text-base mb-6 uppercase tracking-wider">FitX Station Road</h4>
+                    <ul class="space-y-4 text-gray-500 text-xs">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-crimson-600 mt-1"></i><span>Infront of bhimganjmandi police station, kota jn. Kota</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone text-crimson-600"></i><a href="tel:+919079552912" class="hover:text-crimson-500 transition interactive-element">+91 9079552912</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 mb-8">
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-600 uppercase tracking-wider">
+                    <a href="#home" class="hover:text-crimson-500 transition interactive-element">Home</a>
+                    <a href="#locations" class="hover:text-crimson-500 transition interactive-element">Locations</a>
+                    <a href="#services" class="hover:text-crimson-500 transition interactive-element">Services</a>
+                    <a href="#contact" class="hover:text-crimson-500 transition interactive-element">Contact</a>
+                    <a href="#" class="hover:text-crimson-500 transition interactive-element">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="text-center text-gray-700 text-xs space-y-2">
+                <p>SSL Secured | Optimized for Google Search & Maps</p>
+                <p class="pt-4">© 2024 FitX Gym. All rights reserved. | www.fitxgym.in</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/919352666274" target="_blank" class="float-whatsapp w-14 h-14 bg-green-600 hover:bg-green-500 rounded-sm flex items-center justify-center text-white text-2xl shadow-[0_0_20px_rgba(22,163,74,0.4)] transition-all duration-300 hover:scale-110 interactive-element" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+916377463270" class="w-14 h-14 bg-crimson-600 hover:bg-crimson-500 rounded-sm flex items-center justify-center text-white text-xl shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300 hover:scale-110 animate-pulse interactive-element" title="Call Now">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <script>
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        const interactiveElements = document.querySelectorAll('.interactive-element');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+        });
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovered'));
+            el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovered'));
+        });
+
+        // 3D Tilt Effect for Elite Cards
+        document.querySelectorAll('.elite-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
+        closeMobileMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+        // Branch Tabs Logic
+        function switchBranch(branch) {
+            document.querySelectorAll('.branch-detail').forEach(el => el.classList.add('hidden'));
+            const target = document.getElementById('branch-' + branch);
+            target.classList.remove('hidden');
+            target.classList.add('animate-fade-up');
+            
+            document.querySelectorAll('[id^="tab-"]').forEach(tab => {
+                tab.classList.remove('tab-active');
+                tab.classList.add('tab-inactive');
+            });
+            document.getElementById('tab-' + branch).classList.remove('tab-inactive');
+            document.getElementById('tab-' + branch).classList.add('tab-active');
+            
+            updateMap(branch);
+        }
+
+        // Map Update Logic (Smooth, No Glitch)
+        const mapUrls = {
+            kunhari: "https://maps.google.com/maps?q=25.1992085,75.826597&z=15&output=embed",
+            gumanpura: "https://maps.google.com/maps?q=25.1773156,75.8518131&z=15&output=embed",
+            station: "https://maps.google.com/maps?q=25.223147,75.8757549&z=15&output=embed"
+        };
+
+        function updateMap(location) {
+            const container = document.getElementById('mapContainer');
+            const iframe = document.getElementById('branchMap');
+            
+            container.classList.add('loading');
+            setTimeout(() => {
+                iframe.src = mapUrls[location];
+                iframe.onload = () => {
+                    container.classList.remove('loading');
+                };
+            }, 300);
+
+            document.querySelectorAll('.map-btn').forEach(btn => {
+                if(btn.dataset.location === location) {
+                    btn.classList.remove('bg-surface', 'border-crimson-600/50');
+                    btn.classList.add('bg-crimson-600', 'shadow-[0_0_20px_rgba(220,38,38,0.3)]');
+                } else {
+                    btn.classList.add('bg-surface', 'border-crimson-600/50');
+                    btn.classList.remove('bg-crimson-600', 'shadow-[0_0_20px_rgba(220,38,38,0.3)]');
+                }
+            });
+        }
+
+        // Transformation Filter Logic
+        function filterTransformations(category) {
+            document.querySelectorAll('.transform-filter').forEach(btn => {
+                btn.classList.remove('tab-active');
+                btn.classList.add('tab-inactive');
+            });
+            event.target.classList.remove('tab-inactive');
+            event.target.classList.add('tab-active');
+
+            document.querySelectorAll('.transform-item').forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    item.classList.add('animate-fade-up');
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Toggle Tips Expansion Logic
+        function toggleTip(id) {
+            const content = document.getElementById(`tip-content-${id}`);
+            const btnText = document.getElementById(`tip-btn-text-${id}`);
+            const icon = document.getElementById(`tip-icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                btnText.textContent = 'Close Feed';
+                icon.classList.remove('fa-arrow-right');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                content.classList.add('hidden');
+                btnText.textContent = 'Read Full Protocol';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-arrow-right');
+            }
+        }
+
+        // Razorpay Payment Integration Logic
+        // Razorpay Payment Integration Logic
+function initiatePayment(planName, amount) {
+    // ⚠️ REPLACE THIS WITH YOUR ACTUAL RAZORPAY KEY ID
+    // Get it from: https://dashboard.razorpay.com/app/keys
+    const razorpayKeyId = "rzp_test_YOUR_ACTUAL_KEY_HERE"; 
+
+    // MOCK MODE: If you haven't added your real key yet, this simulates a success 
+    // so you can see how the UI behaves. Remove this 'if' block once you have a real key.
+    if (razorpayKeyId === "rzp_test_YOUR_ACTUAL_KEY_HERE" || razorpayKeyId === "YOUR_RAZORPAY_KEY_ID") {
+        const confirmMock = confirm("⚠️ MOCK PAYMENT MODE\n\nYou haven't added a real Razorpay Key yet.\n\nClick 'OK' to simulate a successful payment and see the UI flow.\nClick 'Cancel' to go get your real key.");
+        if (confirmMock) {
+            const mockPaymentId = "pay_Mock" + Math.floor(Math.random() * 1000000);
+            alert(`✅ MOCK PAYMENT SUCCESSFUL!\n\nPayment ID: ${mockPaymentId}\nPlan: ${planName}\nAmount: ₹${amount}\n\nWelcome to the FitX Elite. We will contact you shortly to activate your access.`);
+        }
+        return; // Stop execution here
+    }
+
+    // REAL PAYMENT MODE: This runs only when you have a valid Razorpay Key
+    const options = {
+        "key": razorpayKeyId, 
+        "amount": amount * 100, // Amount in paise (₹1499 = 149900 paise)
+        "currency": "INR",
+        "name": "FitX Gym Elite",
+        "description": `${planName} Activation`,
+        "image": "https://cdn-icons-png.flaticon.com/512/2964/2964514.png", // Generic gym icon
+        "handler": function (response) {
+            // This executes ONLY when payment is genuinely successful
+            alert(`✅ PAYMENT SUCCESSFUL!\n\nPayment ID: ${response.razorpay_payment_id}\nPlan: ${planName}\nAmount: ₹${amount}\n\nWelcome to the FitX Elite. We will contact you shortly to activate your access.`);
+            
+            // Optional: Automatically fill the contact form with their details after payment
+            document.getElementById('formName').value = "Elite Member";
+            document.getElementById('formPhone').value = response.razorpay_contact || "";
+        },
+        "prefill": {
+            "name": document.getElementById('formName')?.value || "FitX Member",
+            "email": "member@fitxgym.in",
+            "contact": document.getElementById('formPhone')?.value || "9999999999"
+        },
+        "theme": {
+            "color": "#dc2626" // Matches your crimson-600 theme
+        },
+        "modal": {
+            "ondismiss": function(){
+                console.log("Payment checkout closed by user");
+            }
+        }
+    };
+    
+    try {
+        const rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response){
+            alert(`❌ PAYMENT FAILED\n\nCode: ${response.error.code}\nDescription: ${response.error.description}\n\nPlease try again or contact us via WhatsApp.`);
+        });
+        rzp1.open();
+    } catch (error) {
+        console.error("Razorpay initialization error:", error);
+        alert("Payment gateway failed to load. Please check your internet connection or try again later.");
+    }
+}
+
+        // Lead Form - Background Email Notification (Web3Forms)
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('formName').value;
+            const phone = document.getElementById('formPhone').value;
+            const branch = document.getElementById('formBranch').value;
+            const goal = document.getElementById('formGoal').value;
+            const submitBtn = this.querySelector('button[type="submit"]');
+
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Transmitting...';
+            submitBtn.disabled = true;
+
+            const accessKey = "PASTE_YOUR_WEB3FORMS_KEY_HERE";
+
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                    body: JSON.stringify({
+                        access_key: accessKey,
+                        name: name,
+                        phone: phone,
+                        branch: branch,
+                        goal: goal,
+                        subject: `🔔 New FitX Elite Lead: ${name} (${branch})`,
+                        from_name: "FitX Gym Website"
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    document.getElementById('leadForm').classList.add('hidden');
+                    document.getElementById('formSuccess').classList.remove('hidden');
+                } else {
+                    alert("Transmission failed. Please try again or use WhatsApp.");
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Transmit Inquiry';
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Network error. Please try again.");
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Transmit Inquiry';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('#navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-2xl', 'bg-void/95');
+            } else {
+                nav.classList.remove('shadow-2xl', 'bg-void/95');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-up');
+                    entry.target.style.opacity = '1';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <!-- Structured Data for Local SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        "name": "FitX Gym",
+        "description": "Elite Fitness Destination in Kota with 3 locations in Kunhari, Gumanpura, and Station Road",
+        "url": "https://www.fitxgym.in",
+        "telephone": "+91-6377463270",
+        "address": [
+            { "@type": "PostalAddress", "streetAddress": "Plot no. G-26 Behind amar panjabi express, landmark city kunhari kota", "addressLocality": "Kota", "addressRegion": "Rajasthan", "postalCode": "324005", "addressCountry": "IN" },
+            { "@type": "PostalAddress", "streetAddress": "Plot no. 4, 2nd floor Behind partn medical store, kothri circle, gumanpura kota", "addressLocality": "Kota", "addressRegion": "Rajasthan", "postalCode": "324007", "addressCountry": "IN" },
+            { "@type": "PostalAddress", "streetAddress": "Infront of bhimganjmandi police station, kota jn. Kota", "addressLocality": "Kota", "addressRegion": "Rajasthan", "postalCode": "324001", "addressCountry": "IN" }
+        ],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "850" },
+        "openingHours": "Mo-Su 05:00-23:00"
+    }
+    </script>
+</body>
+</html>
+
